@@ -178,7 +178,7 @@ function CartPage() {
               </h3>
               <button
                 onClick={handleProceed}
-                className="px-6 py-3 bg-PrimaryColor text-white font-semibold rounded-md hover:bg-blue-700 transition"
+                className="px-6 py-3 bg-PrimaryColor text-white font-semibold rounded-md hover:bg-SecondryColor transition-all duration-300"
               >
                 Proceed to Checkout
               </button>

@@ -28,8 +28,8 @@ const RangeSection = () => {
   return (
     <section className="text-center my-12 px-4 sm:px-8 lg:px-16">
       {/* Title & Description */}
-      <h2 className="text-3xl font-bold ">{data.title}</h2>
-      <p className="text-gray-500 mt-2 max-w-2xl mx-auto">{data.description}</p>
+      <h2 className="text-gray-900 text-3xl font-bold ">{data.title}</h2>
+      <p className="text-gray-600 mt-2 max-w-2xl mx-auto">{data.description}</p>
 
       {/* Image Grid */}
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 justify-center items-end">
@@ -49,7 +49,7 @@ const RangeSection = () => {
                   alt={`Image ${index + 1}`}
                   width={300}
                   height={300}
-                  className="object-cover w-3/4 h-2/3"
+                  className="object-cover w-3/4 h-2/3 rounded-lg"
                 />
               ) : (
                 <p className="text-red-500">Image not found</p>

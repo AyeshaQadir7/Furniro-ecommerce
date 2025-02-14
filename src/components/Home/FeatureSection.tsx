@@ -33,15 +33,15 @@ const FeatureSection = () => {
         <div className="flex-1 text-center lg:text-left">
           <h2 className="text-4xl font-semibold text-gray-900">{data.title}</h2>
           <p className="text-gray-600 mt-4">{data.description}</p>
-          <button className="mt-6 px-6 py-3 bg-PrimaryColor text-white hover:bg-blue-800 transition">
+          <button className="mt-6 px-6 py-3 bg-PrimaryColor text-white hover:bg-SecondryColor transition duration-300">
             {data.buttonText}
           </button>
         </div>
 
         {/* Right Side: Image */}
         <div className="relative flex-1">
-          <div className="absolute sm:-right-2 top-16 w-36 h-36 bg-PrimaryColor rounded-full lg:block"></div>
-          <div className="absolute sm:right-24 right-6 top-36 w-36 h-36 bg-Secondry rounded-md lg:block"></div>
+          <div className="absolute -right-28 sm:-right-2 top-16 md:w-36 md:h-36 w-28 h-28 bg-PrimaryColor rounded-full lg:block"></div>
+          <div className="absolute top-32 -right-12 sm:right-24 md:top-36 w-36 h-36 border-[10px] border-gray-100 bg-AccentColor rounded-md lg:block"></div>
 
           {data.image?.asset && (
             <Image

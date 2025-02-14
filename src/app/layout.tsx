@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,13 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="max-w-[1400px] mx-auto overflow-x-hidden text-TextColor">
+        <div className="max-w-[1400px] mx-auto overflow-x-hidden text-TextColor scroll-smooth">
           <ScrollToTop />
           <Navbar />
-          {children}
+          {children || notFound()}
           <Footer />
         </div>
       </body>

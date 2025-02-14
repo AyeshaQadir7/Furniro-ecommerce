@@ -50,7 +50,7 @@ const Login = () => {
       </section>
       <div className="py-8 px-4 sm:px-8 w-full bg-PrimaryColor items-center">
         {/* Filter and sorting section */}
-        <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:space-y-0">
+        <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:space-y-0 ">
           {/* Filter */}
           <div className="flex items-center gap-4">
             <SlidersHorizontal

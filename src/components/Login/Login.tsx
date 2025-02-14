@@ -30,7 +30,7 @@ function SignInForm() {
               type="email"
               id="email"
               placeholder="Enter your email"
-              className="w-full px-4 py-4 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-0 focus:border-Gold"
+              className="w-full px-4 py-4 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-0 focus:border-PrimaryColor"
             />
           </div>
 
@@ -46,7 +46,7 @@ function SignInForm() {
               type={passwordVisible ? "text" : "password"}
               id="password"
               placeholder="Enter your password"
-              className="w-full px-4 py-4 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-0 focus:border-Gold"
+              className="w-full px-4 py-4 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-0 focus:border-PrimaryColor"
             />
             <div
               className="absolute right-3 mt-4 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-600 "
@@ -59,7 +59,7 @@ function SignInForm() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full px-4 py-2 text-white bg-PrimaryColor hover:bg-yellow-600 rounded-md  focus:outline-none"
+            className="w-full px-4 py-2 text-white bg-PrimaryColor hover:bg-SecondryColor rounded-md  focus:outline-none transition-all duration-300"
           >
             Login In
           </button>
@@ -67,12 +67,13 @@ function SignInForm() {
 
         {/* Additional Links */}
         <p className="mt-4 text-sm text-center text-gray-600">
-          Don’t have an account?{" "}
+          Don&apos;t have an account?
           <Link
             href="#"
-            className="text-Gold hover:underline focus:outline-none"
+            className="text-PrimaryColor hover:underline focus:outline-none"
           >
-            Sign up
+            {" "}
+            Sign up{" "}
           </Link>
         </p>
       </div>

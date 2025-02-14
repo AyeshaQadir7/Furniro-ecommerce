@@ -105,7 +105,7 @@ function PaymentForm() {
       {/* Stripe's payment element (handles input fields for card details, etc.) */}
       <PaymentElement />
       <button
-        className="bg-PrimaryColor p-3 my-4 rounded-md w-full text-white"
+        className="bg-PrimaryColor hover:bg-SecondryColor transition-all duration-300 p-3 my-4 rounded-md w-full text-white"
         type="submit"
         disabled={!stripe || isProcessing}
       >

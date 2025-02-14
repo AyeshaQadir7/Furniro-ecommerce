@@ -25,12 +25,13 @@ const Login = () => {
   return (
     <section className="relative w-full bg-Creame">
       {/* Image container */}
-      <div className="relative w-full h-64">
+      <div className="relative w-full h-64 ">
         <Image
           src={backgroundImage || "/assets/blog/heroImage.png"}
           alt="Background"
           fill
           objectFit="cover"
+          // className="opacity-80"
         />
         {/* Text overlay */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-center">

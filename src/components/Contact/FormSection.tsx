@@ -140,7 +140,7 @@ function ContactPage() {
 
             <button
               type="submit"
-              className="px-12 py-2 text-white bg-PrimaryColor rounded-sm hover:bg-yellow-600"
+              className="px-12 py-2 text-white bg-PrimaryColor rounded-sm hover:bg-SecondryColor transition-colors duration-300"
             >
               Submit
             </button>

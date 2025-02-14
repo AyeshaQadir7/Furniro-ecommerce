@@ -51,8 +51,8 @@ const ProductSection = () => {
   };
 
   return (
-    <section>
-      <h2 className="flex justify-center mt-14 mb-8 text-DarkBrown text-4xl font-semibold">
+    <section className="my-28">
+      <h2 className="flex justify-center mt-14 mb-8 text-gray-900 text-4xl font-semibold">
         Our Products
       </h2>
 
@@ -61,7 +61,7 @@ const ProductSection = () => {
           {products.map((product) => (
             <div
               key={product._id}
-              className="relative group w-full max-w-sm justify-center overflow-hidden bg-zinc-100 rounded-md transition-all duration-300 ease-in-out mb-6"
+              className="relative group w-full max-w-sm justify-center overflow-hidden bg-zinc-100 rounded-md transition-all duration-300 ease-in-out md:mb-6 mb-4"
             >
               <Link href={`/product/${product.slug.current}`}>
                 {/* Product Image */}
@@ -86,14 +86,14 @@ const ProductSection = () => {
                     alt={product.title}
                     width={300}
                     height={400}
-                    className="object-cover w-full h-64 md:h-80 transition-transform duration-300 ease-in-out"
+                    className="object-cover w-full h-56 md:64 md:h-80 transition-transform duration-300 ease-in-out"
                   />
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-DarkBrown opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
                 </div>
 
                 {/* Add to Cart Button Hover Icons (Like and Share) */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-16">
                   <button
                     className="bg-white text-PrimaryColor px-6 py-2 font-semibold hover:bg-PrimaryColor hover:text-white transition-all duration-300"
                     onClick={(e) => handleAddToCart(e, product)}
@@ -102,10 +102,10 @@ const ProductSection = () => {
                   </button>
                   <div className="flex justify-center gap-6">
                     <button className="text-white hover:text-Gold transition-colors duration-300">
-                      <Heart />
+                      <Heart color="#ffffff" />
                     </button>
-                    <button className="text-white hover:text-Gold transition-colors duration-300">
-                      <Share2 />
+                    <button className="text-white hover:text-PrimaryColor transition-colors duration-300">
+                      <Share2 color="#ffffff" />
                     </button>
                   </div>
                 </div>
@@ -115,17 +115,23 @@ const ProductSection = () => {
                   <h3 className="text-xl font-medium mb-2 text-zinc-800">
                     {product.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-1">
+                  <p className="text-gray-600 mb-4 line-clamp-2 md:line-clamp-1">
                     {product.description}
                   </p>
-                  <p className="mb-4 text-zinc-800 font-medium text-lg">
-                    Rp {product.price.toFixed(2)}
+                  <p className="md:mb-4 mb-2 text-zinc-800 font-medium text-lg">
+                   $ {product.price.toFixed(2)}
                   </p>
                 </div>
               </Link>
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="flex justify-center">
+        <button className="border-2 font-medium text-PrimaryColor border-PrimaryColor py-3 px-8 hover:bg-PrimaryColor hover:text-white transition-all duration-300">
+          <Link href="/shop">Show More</Link>
+        </button>
       </div>
     </section>
   );
