@@ -19,7 +19,7 @@ export default async function HeroSection() {
       {/* Hero Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src={urlFor(hero.backgroundImage).url()}
+          src={urlFor(hero.backgroundImage).width(2000).url()}
           alt="Hero Image"
           fill
           objectFit="cover"

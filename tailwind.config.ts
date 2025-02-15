@@ -15,7 +15,7 @@ export default {
         TextColor: "#151411",
         DarkBrown: "#3A3A3A",
         PrimaryColor: "#518581",
-        SecondryColor: "#6E9996",
+        SecondryColor: "",
         AccentColor: "#FFB23F",
         card: {
           DEFAULT: "hsl(var(--card))",

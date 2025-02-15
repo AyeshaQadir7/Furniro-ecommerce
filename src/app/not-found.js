@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Custom404() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-900">
-      <h1 className="text-4xl font-semibold text-PrimaryColor">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-900 ">
+      <h1 className=" text-4xl font-semibold text-PrimaryColor mx-8">
         404 - Page Not Found
       </h1>
-      <p className="mt-2">
+      <p className="mt-2 mx-6">
         Oops! The page you&apos;re looking for doesn&apos;t exist.
       </p>
       <Link href="/">
